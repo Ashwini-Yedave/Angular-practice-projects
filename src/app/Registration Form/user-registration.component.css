@@ -1,0 +1,13 @@
+.card{
+    margin-top: 100px;
+  left: 400px;
+  height: auto;
+ 
+}
+.invalid-feedback {
+    color: red;
+}
+
+.is-invalid {
+    border-color: red;
+}

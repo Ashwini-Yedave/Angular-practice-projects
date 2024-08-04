@@ -1,0 +1,16 @@
+.card{
+    width: 400px;
+    
+    display: flex;
+    align-items: center;
+    border-color: black;
+    background-color: aqua;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+button{
+    margin-right: 10px;
+    border-radius: 5px;
+}

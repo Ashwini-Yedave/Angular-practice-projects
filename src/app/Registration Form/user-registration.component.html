@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header bg-success text-white">
+        <div class="row">
+          <div class="col-6">
+            New User
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <form class="needs-validation" novalidate [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="username">Username *</label>
+              <input type="text" name="username" class="form-control" formControlName="username"
+                placeholder="Enter the Username"
+                [class.is-invalid]="username?.invalid && (username?.dirty || username?.touched)">
+              <div *ngIf="username?.invalid && (username?.dirty || username?.touched)" class="invalid-feedback">
+                <div *ngIf="username?.errors?.['required']">Username is required.</div>
+                <div *ngIf="username?.errors?.['minlength']">Username must be at least 3 characters long.</div>
+              </div>
+            </div>
+            <div class="col-md-12 mb-3">
+              <label for="mail">Mail *</label>
+              <input type="text" name="email" class="form-control" formControlName="email" placeholder="Enter the Email"
+                [class.is-invalid]="email?.invalid && (email?.dirty || email?.touched)">
+              <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="invalid-feedback">
+                <div *ngIf="email?.errors?.['required']">Email is required.</div>
+                <div *ngIf="email?.errors?.['email']">Invalid email format.</div>
+              </div>
+            </div>
+            <div class="col-md-12 mb-3">
+              <label for="password">Password *</label>
+              <div class="input-group">
+                <input type="password" name="password" class="form-control" formControlName="password"
+                  placeholder="Enter the Password"
+                  [class.is-invalid]="password?.invalid && (password?.dirty || password?.touched)">
+                <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="invalid-feedback">
+                  <div *ngIf="password?.errors?.['required']">Password is required.</div>
+                  <div *ngIf="password?.errors?.['minlength']">Password must be at least 6 characters long.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit" [disabled]="registrationForm.invalid">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

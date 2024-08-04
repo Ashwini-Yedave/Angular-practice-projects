@@ -1,0 +1,53 @@
+{
+    "user":[
+        {
+            "userId":1,
+            "Username":"mahesh",
+            "Fname":"mahesh",
+            "Lname":"Lendave",
+            "city":"",
+            "state":"",
+            "zipcode":123456
+        },
+        {
+            "userId":2,
+            "Username":"mahesh",
+            "Fname":"mahesh",
+            "Lname":"Lendave",
+            "city":"",
+            "state":"",
+            "zipcode":123456
+        },
+        {
+            "userId":3,
+            "Username":"mahesh",
+            "Fname":"mahesh",
+            "Lname":"Lendave",
+            "city":"",
+            "state":"",
+            "zipcode":123456
+        }
+    ],
+    "cityList": [
+        { "name": "pune" },
+        { "name": "thane" },
+        { "name": "solapur" },
+        { "name": "kolapur" }
+      ],
+      "stateList": [
+        { "name": "Maharashtra" },
+        { "name": "goa" },
+        { "name": "gujrat" },
+        { "name": "uattar pradesh" }
+      ],
+    "updateUser":
+    {
+        "result":true,
+        "data":{  "userId":2,"Username":"mahesh", "Fname":"mahesh","Lname":"Lendave", "city":"", "state":"", "zipcode":123456}
+    },
+    "deleteUser":
+    {
+       "result":true,
+       "data":{  "userId":3,"Username":"mahesh","Fname":"mahesh","Lname":"Lendave", "city":"","state":"","zipcode":123456}
+    }
+}
