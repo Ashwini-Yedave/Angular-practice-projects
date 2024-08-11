@@ -2,4 +2,10 @@
  <!-- <app-user-registration></app-user-registration> -->
  
   <!-- <app-check-activity></app-check-activity> -->
-  <app-calculate-age></app-calculate-age>
+  <!-- <app-calculate-age></app-calculate-age> -->
+  <!-- <app-product-list [hero]="data" [executeMethod]="add"></app-product-list> -->
+  <!-- // <app-directives></app-directives> -->
+    <div>
+      <app-child-component [parentData]="title" (myEvent)="handleEvent($event)"></app-child-component>
+      <input type="number" [value]="result" placeholder="Result" readonly>
+</div>

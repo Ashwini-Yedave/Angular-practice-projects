@@ -1,0 +1,33 @@
+<p>dirictives works!..</p>
+<!--directives are used to manuplate the dom element OR change the looks and bhavior of dom element
+componenet directives - 
+
+structural directives:- 
+1] *ngIf - to add the dom element on condition basis
+2] *ngFor - to add multiple elements in dom
+3] *ngSwitch - 
+
+ Attribute directives:-
+ 1] ngStyle
+ 
+ 2] ngClass - we can add style dynamically or set of css property 
+
+
+custome directives:-
+custom directives in angular allow you to change the behavior or appearence of dom element
+custom directives povide the common functionality for dom element
+
+Q- diffrence between component and directives
+syntax:-
+     ng g d directive_name
+-componenet is building block of statement
+-compnent have there own html template
+-compnent can execute in there own space
+
+-directives does not have their own html template
+-directives does not execute in there own space -->
+
+<div *ngFor="let dta of data">
+<p>  {{dta.name}} {{dta.id}}</p>
+</div>
+<div>hello Good Morning..</div>

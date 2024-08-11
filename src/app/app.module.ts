@@ -9,6 +9,9 @@ import { JsonComponent } from './Jsoncrud/jsoncrud.component';
 import { UserRegistrationComponent } from './Registration Form/user-registration.component';
 import { CheckActivityComponent } from './CheckActivitiy/check-activity.component';
 import { CalculateAge } from './Calculate Age/calculate-age.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { ChildComponentComponent } from './child-component/child-component.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { CalculateAge } from './Calculate Age/calculate-age.component';
     JsonComponent,
     UserRegistrationComponent,
     CheckActivityComponent,
-    CalculateAge
+    CalculateAge,
+    ProductListComponent,
+    DirectivesComponent,
+    ChildComponentComponent
   ],
   imports: [
     BrowserModule,
