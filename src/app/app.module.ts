@@ -3,26 +3,35 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { JsonComponent } from './Jsoncrud/jsoncrud.component';
 import { UserRegistrationComponent } from './Registration Form/user-registration.component';
 import { CheckActivityComponent } from './CheckActivitiy/check-activity.component';
 import { CalculateAge } from './Calculate Age/calculate-age.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { AuthIntercepterInterceptor } from './auth-intercepter.interceptor';
+import { HomeComponent } from './fruit/home/home.component';
+import { CreateComponent } from './fruit/create/create.component';
+import { EditComponent } from './fruit/edit/edit.component';
+import { ViewChildComponent } from './view-child/view-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JsonComponent,
     UserRegistrationComponent,
     CheckActivityComponent,
     CalculateAge,
     ProductListComponent,
     DirectivesComponent,
-    ChildComponentComponent
+    ChildComponentComponent,
+    TemplateDrivenFormComponent,
+    HomeComponent,
+    CreateComponent,
+    EditComponent,
+    ViewChildComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +40,13 @@ import { ChildComponentComponent } from './child-component/child-component.compo
     HttpClientModule ,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthIntercepterInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

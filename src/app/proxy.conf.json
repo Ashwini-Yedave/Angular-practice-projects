@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://dummyapi.online",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  
