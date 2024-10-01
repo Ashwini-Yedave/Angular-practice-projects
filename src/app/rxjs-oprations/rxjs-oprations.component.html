@@ -1,0 +1,47 @@
+<p>rxjs-oprations works!</p>
+<!-- 1]rxjs is used for the handling the asynchronus data
+     2] and its simplifie the data 
+     3] is used for also reactive web pages  
+     4]and is by deafult comes in angular no need to install sepretly
+     
+     
+* Observable :-
+      is basically used for the handling the asynchronus data
+      observable is data stram is provided by the rxjs libraray
+      used the next method/key for emmiting the data
+
+*oprator :-(before subscribe the data used opratrs)
+      1] oprator is nothing but functions.which is used for do oprations on observable 
+      2] map, filter- used for filter data defend on cndition.,
+      tap-used for without changing the stream data ,for console and for throw the error
+      , shareReply is used for
+      3] used the pipe method accept the callback inside that we use the oprator 
+
+* Observer/Subscriber :-
+      1] is used for repersent the observable.
+      2] to subscribe the observable and get the data
+      3] we can simply subscribe the data and use
+      4] subscriber accept the one callback 
+      5] inside the callback we can call the next(),error(),complete() method
+      6] error method show the error when we emit the data inside the observable
+
+      diff between promises and observable
+        . ob can emit multple values where as promise emit single value
+        . ob subscription (obj.unsubscribe() )is cancellable but promises aren't
+        . ob have oprators to reduce the efforts doesn't have promises
+        . ob lazy execution means we must the subscrbe the ob before that not see the data
+            vs not have lazy in promises without subscribe we can see the data
+        0  
+-->
+
+
+
+<!-- use the fromEvent for creating observable by using the dom element     
+  -->
+<div>
+      <input type="text"  #search/>
+      <div  *ngFor="let u of users" style="display: flex; margin: 10px;">
+          <img [src]="u.avatar_url" style="width: 50px; height: auto; border-radius: 50%;"/>
+           <h4>{{u.login}}</h4>
+      </div>
+</div>

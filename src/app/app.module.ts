@@ -17,6 +17,10 @@ import { HomeComponent } from './fruit/home/home.component';
 import { CreateComponent } from './fruit/create/create.component';
 import { EditComponent } from './fruit/edit/edit.component';
 import { ViewChildComponent } from './view-child/view-child.component';
+import { TodolistComponent } from './todolist/todolist/todolist.component';
+import { CustomeDirectiveDirective } from './custome-directive.directive';
+import { ObservableComponent } from './observables/observable/observable.component';
+import { RxjsOprationsComponent } from './rxjs-oprations/rxjs-oprations.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { ViewChildComponent } from './view-child/view-child.component';
     HomeComponent,
     CreateComponent,
     EditComponent,
-    ViewChildComponent
+    ViewChildComponent,
+    TodolistComponent,
+    CustomeDirectiveDirective,
+    ObservableComponent,
+    RxjsOprationsComponent
   ],
   imports: [
     BrowserModule,
